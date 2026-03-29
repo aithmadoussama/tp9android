@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/add_etudiant"
+    android:padding="16dp">
+
+    <TextView
+        android:id="@+id/tvNom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Nom :"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/nom"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Entrer le nom"
+        app:layout_constraintTop_toBottomOf="@id/tvNom"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/tvPrenom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Prenom :"
+        app:layout_constraintTop_toBottomOf="@id/nom"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="16dp" />
+
+    <EditText
+        android:id="@+id/prenom"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Entrer le prenom"
+        app:layout_constraintTop_toBottomOf="@id/tvPrenom"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/tvVille"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Ville :"
+        app:layout_constraintTop_toBottomOf="@id/prenom"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="16dp" />
+
+    <Spinner
+        android:id="@+id/ville"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:entries="@array/villes"
+        app:layout_constraintTop_toBottomOf="@id/tvVille"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/tvSexe"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Sexe :"
+        app:layout_constraintTop_toBottomOf="@id/ville"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="16dp" />
+
+    <RadioGroup
+        android:id="@+id/sexe"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintTop_toBottomOf="@id/tvSexe"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <RadioButton
+            android:id="@+id/homme"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Homme" />
+
+        <RadioButton
+            android:id="@+id/femme"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Femme" />
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/ajouter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Ajouter"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sexe"
+        app:layout_constraintVertical_bias="0.18" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
